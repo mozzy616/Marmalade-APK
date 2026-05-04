@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="Alerts">
+		<control type="group">
+			<visible>Container(9000).HasFocus(12)</visible>
+			<include>SettingsFadeEffect</include>
+			<left>470</left>
+			<top>0</top>
+			<width>1400</width>
+			<height>780</height>
+
+			<control type="panel" id="308">
+				<left>0</left>
+				<top>0</top>
+				<width>1400</width>
+				<height>780</height>
+				<onup>308</onup>
+				<ondown>308</ondown>
+				<onleft>9000</onleft>
+				<onclick>Skin.ToggleSetting(Weather.Zoom.Alert)</onclick>
+				<onfocus>Skin.Reset(Weather.Zoom.Alert)</onfocus>
+				<onunfocus>Skin.Reset(Weather.Zoom.Alert)</onunfocus>
+
+				<orientation>vertical</orientation>
+				<!-- <scrolltime tween="quadratic" easing="out">200</scrolltime> -->
+				<itemlayout height="660" width="1400">
+
+					<include content="ItemBorder">
+						<param name="bottom" value="20" />
+					</include>
+
+					<control type="label">
+						<left>30</left>
+						<top>30</top>
+						<width>1350</width>
+						<height>50</height>
+						<font>font16</font>
+						<selectedcolor>SelectedColor</selectedcolor>
+						<label>[COLOR=Alert]$INFO[ListItem.Label][/COLOR]</label>
+					</control>
+					<control type="textbox">
+						<width>1350</width>
+						<left>30</left>
+						<top>100</top>
+						<height>520</height>
+						<font>font15</font>
+						<selectedcolor>SelectedColor</selectedcolor>
+						<scrolltime>200</scrolltime>
+						<label>$INFO[ListItem.Property(description)]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="660" width="1400">
+					<control type="button" id="3065">
+						<visible>false</visible>
+						<description>Dummy object to catch focus so we can clear property</description>
+<!-- 						<onclick>Skin.ToggleSetting(Weather.Zoom.Alert)</onclick> -->
+						<onfocus>Skin.Reset(Weather.Zoom.Alert)</onfocus>
+						<onunfocus>Skin.Reset(Weather.Zoom.Alert)</onunfocus>
+					</control>
+
+					<include content="ItemFocusBorder">
+						<param name="bottom" value="20" />
+					</include>
+					
+					<control type="label">
+						<left>30</left>
+						<top>30</top>
+						<width>1350</width>
+						<height>50</height>
+						<font>font16</font>
+						<label>[COLOR=Alert]$INFO[ListItem.Label][/COLOR]</label>
+					</control>
+					<control type="textbox">
+						<width>1350</width>
+						<left>30</left>
+						<top>100</top>
+						<height>520</height>
+						<font>font15</font>
+						<scrolltime>200</scrolltime>
+						<include content="AutoscrollDefault"></include>
+						<label>$INFO[ListItem.Property(description)]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>$LOCALIZE[31909]</label>
+						<icon />
+						<visible>String.IsEmpty(Window.Property(Daily.IsFetched))</visible>
+					</item>
+					<include content="weather-alert-item">
+						<param name="index" value="1" />
+					</include>
+					<include content="weather-alert-item">
+						<param name="index" value="2" />
+					</include>
+					<include content="weather-alert-item">
+						<param name="index" value="3" />
+					</include>
+					<include content="weather-alert-item">
+						<param name="index" value="4" />
+					</include>
+					<include content="weather-alert-item">
+						<param name="index" value="5" />
+					</include>
+					<include content="weather-alert-item">
+						<param name="index" value="6" />
+					</include>
+					<include content="weather-alert-item">
+						<param name="index" value="7" />
+					</include>
+					<include content="weather-alert-item">
+						<param name="index" value="8" />
+					</include>
+					<include content="weather-alert-item">
+						<param name="index" value="9" />
+					</include>
+					<include content="weather-alert-item">
+						<param name="index" value="10" />
+					</include>
+
+				</content>
+			</control>
+		</control>
+
+	</include>
+</includes>

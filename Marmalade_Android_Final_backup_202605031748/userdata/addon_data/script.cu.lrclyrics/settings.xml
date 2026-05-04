@@ -1,0 +1,35 @@
+<settings version="2">
+    <setting id="search_embedded" default="true">true</setting>
+    <setting id="search_lrc_file" default="true">true</setting>
+    <setting id="search_txt_file" default="true">true</setting>
+    <setting id="musixmatchlrc" default="true">true</setting>
+    <setting id="lrclib" default="true">true</setting>
+    <setting id="music163" default="true">true</setting>
+    <setting id="rclyricsband" default="true">true</setting>
+    <setting id="megalobiz" default="true">true</setting>
+    <setting id="genius" default="true">true</setting>
+    <setting id="musixmatch" default="true">true</setting>
+    <setting id="lyricsmode" default="true">true</setting>
+    <setting id="azlyrics" default="true">true</setting>
+    <setting id="lyricscom" default="true">true</setting>
+    <setting id="supermusic" default="true">true</setting>
+    <setting id="darklyrics" default="true">true</setting>
+    <setting id="service" default="true">true</setting>
+    <setting id="silent" default="true">false</setting>
+    <setting id="hide_dialog" default="true">false</setting>
+    <setting id="strip" default="true">false</setting>
+    <setting id="read_filename" default="true">false</setting>
+    <setting id="read_filename_format" default="true">0</setting>
+    <setting id="clean_title" default="true">false</setting>
+    <setting id="save_lyrics1_lrc" default="true">true</setting>
+    <setting id="save_lyrics1_txt" default="true">true</setting>
+    <setting id="save_lyrics_path">special://home/userdata\addon_data\script.cu.lrclyrics\lyrics</setting>
+    <setting id="save_filename_format" default="true">0</setting>
+    <setting id="save_lyrics2_lrc" default="true">false</setting>
+    <setting id="save_lyrics2_txt" default="true">false</setting>
+    <setting id="save_subfolder" default="true">false</setting>
+    <setting id="save_subfolder_path" default="true">lyrics</setting>
+    <setting id="internetradio" default="true">false</setting>
+    <setting id="offset" default="true">0</setting>
+    <setting id="log_enabled" default="true">false</setting>
+</settings>

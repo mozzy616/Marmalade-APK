@@ -1,0 +1,41 @@
+[
+  {
+    "name": "TV APP",
+    "m3u": "https://tvpass.org/playlist/m3u",
+    "epg": "https://tvpass.org/epg.xml",
+    "icon": "special://home/addons/plugin.video.madtitansports/icon.png",
+    "fanart": "special://home/addons/plugin.video.madtitansports/fanart.jpg"
+  },
+   {
+    "name": "Doms List",
+    "m3u": "https://s.id/d9M3U8",
+    "epg": "https://s.id/d9sEPG",
+    "icon": "special://home/addons/plugin.video.madtitansports/icon.png",
+    "fanart": "special://home/addons/plugin.video.madtitansports/fanart.jpg"
+  },
+  {
+    "name": "MoveONJoy TV Guide",
+    "m3u": "https://raw.githubusercontent.com/iptv-org/iptv/refs/heads/master/streams/us_moveonjoy.m3u",
+    "epg": "https://s.id/d9sEPG"
+  },
+  {
+    "name": "m3u Bot",
+    "m3u": "https://raw.githubusercontent.com/musfiqeee/iptv-m3u-bot/main/output/all.m3u",
+    "epg": "https://s.id/d9sEPG",
+    "icon": "special://home/addons/plugin.video.madtitansports/icon.png",
+    "fanart": "special://home/addons/plugin.video.madtitansports/fanart.jpg"
+  },
+  {
+    "name": "Mr M2 TV Guide",
+    "m3u": "https://raw.githubusercontent.com/blakestrick/m3u/refs/heads/main/m2.m3u",
+    "epg": "https://s.id/d9sEPG"
+  },
+  {
+    "name": "US Local Channels",
+    "m3u": "https://raw.githubusercontent.com/iptv-org/iptv/refs/heads/master/streams/us_local.m3u",
+    "epg": "",
+    "icon": "",
+    "fanart": ""
+  }
+
+]

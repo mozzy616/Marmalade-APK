@@ -1,0 +1,5 @@
+File userdata = new File(getFilesDir(), ".kodi/userdata");
+
+if (!userdata.exists()) {
+    copyAssetFolder("files/.kodi", getFilesDir() + "/.kodi");
+}

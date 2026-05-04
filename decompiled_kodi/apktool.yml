@@ -1,0 +1,29 @@
+version: 2.9.3
+apkFileName: kodi.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+  tag: null
+sdkInfo:
+  minSdkVersion: 21
+  targetSdkVersion: 34
+packageInfo:
+  forcedPackageId: 127
+  renameManifestPackage: null
+versionInfo:
+  versionCode: 2103000
+  versionName: 21.3
+resourcesAreCompressed: false
+sharedLibrary: false
+sparseResources: false
+doNotCompress:
+- resources.arsc
+- META-INF/androidx.core_core.version
+- META-INF/androidx.lifecycle_lifecycle-runtime.version
+- META-INF/androidx.tvprovider_tvprovider.version
+- META-INF/androidx.versionedparcelable_versionedparcelable.version
+- png
+- wav
+- jpg
+- gif

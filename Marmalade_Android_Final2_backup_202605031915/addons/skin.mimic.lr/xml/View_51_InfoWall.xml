@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<!-- Video InfoWall -->
+	<include name="VideoInfoWall">
+		<control type="group">
+			<visible>Control.IsVisible(51) + !$EXP[isInfoDialog]</visible>
+			<include>Animation.Common</include>
+			<top>0</top>
+			<control type="panel" id="51">
+				<left>68</left>
+				<top>190</top>
+				<width>1072</width>
+				<height>792</height>
+				<onleft>SetProperty(MediaMenu,True,home)</onleft>
+				<onleft>SetFocus(9050)</onleft>
+				<onright>60</onright>
+				<onup>51</onup>
+				<ondown>51</ondown>
+				<pagecontrol>60</pagecontrol>
+				<preloaditems>2</preloaditems>
+				<viewtype label="31021">icons</viewtype>
+				<visible>Container.Content(favourites) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)</visible>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+
+				<itemlayout height="396" width="268" condition="![String.IsEqual(Control.GetLabel(10102),banner) |String.IsEqual(Control.GetLabel(10102),fanart) | String.IsEqual(Control.GetLabel(10102),landscape)| String.IsEqual(Control.GetLabel(10102),logo)]">
+					<control type="image">
+						<top>6</top>
+						<left>6</left>
+						<width>256</width>
+						<height>384</height>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<texture fallback="DefaultFallback.png" background="true" diffuse="diffuse/infowall-poster.png">$VAR[Art1Image]</texture>
+					</control>
+					<control type="image">
+						<top>6</top>
+						<left>6</left>
+						<width>256</width>
+						<height>384</height>
+						<texture border="5">overlays/diffuse-overlay.png</texture>
+ 						<visible>Skin.HasSetting(Enable.HighlightFocused)</visible>
+					</control>
+					<include content="OverlayIcons">
+						<param name="OverlayLeft" value="224" />
+						<param name="OverlayTop" value="8" />
+					</include>
+				</itemlayout>
+
+				<focusedlayout height="396" width="268" condition="!String.IsEqual(Control.GetLabel(10102),banner) + ![String.IsEqual(Control.GetLabel(10102),fanart) | String.IsEqual(Control.GetLabel(10102),landscape)| String.IsEqual(Control.GetLabel(10102),logo)]">
+					<control type="group">
+						<include>PanelFocusedItemZoom</include>
+						<control type="image">
+							<top>-10</top>
+							<left>-10</left>
+							<right>-10</right>
+							<bottom>-10</bottom>
+							<texture colordiffuse="FocusColor" border="5">listselect_fo.png</texture>
+						</control>
+						<control type="image">
+							<top>6</top>
+							<left>6</left>
+							<width>256</width>
+							<height>384</height>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<texture fallback="DefaultFallback.png" background="true" diffuse="diffuse/infowall-poster.png">$VAR[Art1Image]</texture>
+<!-- 							<texture fallback="DefaultFallback.png" background="true" diffuse="diffuse/infowall-poster.png">$VAR[Art1Image]</texture> -->
+						</control>
+					</control>
+					<include content="OverlayIcons">
+						<param name="OverlayLeft" value="224" />
+						<param name="OverlayTop" value="8" />
+					</include>
+				</focusedlayout>
+
+				<itemlayout width="1019" height="198" condition="String.IsEqual(Control.GetLabel(10102),banner)">
+					<control type="group">
+<!-- 						<left>25</left> -->
+						<control type="image">
+							<top>6</top>
+							<left>6</left>
+							<width>1007</width>
+							<height>186</height>
+							<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+							<texture background="true" diffuse="diffuse/infowall-banner.png">$VAR[Art1Image]</texture>
+							<visible>!String.IsEmpty(ListItem.Art(banner)) | String.IsEmpty(ListItem.Art(fanart))</visible>
+						</control>
+						<control type="image">
+							<top>6</top>
+							<left>6</left>
+							<width>1007</width>
+							<height>186</height>
+							<aspectratio align="center" aligny="center" scalediffuse="false">keep</aspectratio>
+							<texture background="true" diffuse="diffuse/infowall-banner.png">$INFO[ListItem.Icon]</texture>
+							<visible>String.IsEmpty(ListItem.Art(banner)) + ListItem.IsParentFolder</visible>
+						</control>
+						<control type="group">
+							<visible>String.IsEmpty(ListItem.Art(banner))</visible>
+							<control type="image">
+								<top>6</top>
+								<left>6</left>
+								<width>1007</width>
+								<height>186</height>
+								<aspectratio scalediffuse="false">scale</aspectratio>
+								<texture background="true" diffuse="diffuse/infowall-banner.png">$INFO[ListItem.Art(fanart)]</texture>
+								<fadetime>300</fadetime>
+							</control>
+							<control type="image">
+								<top>16</top>
+								<left>15</left>
+								<width>450</width>
+								<height>151</height>
+								<aspectratio>keep</aspectratio>
+								<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+								<fadetime>300</fadetime>
+							</control>
+						</control>
+						<control type="image">
+							<top>6</top>
+							<left>6</left>
+							<width>1007</width>
+							<height>186</height>
+							<texture border="5">overlays/diffuse-overlay.png</texture>
+ 						<visible>Skin.HasSetting(Enable.HighlightFocused)</visible>
+						</control>
+					</control>
+						<include content="OverlayIcons">
+							<param name="OverlayLeft" value="975" />
+							<param name="OverlayTop" value="8" />
+						</include>
+				</itemlayout>
+
+				<focusedlayout width="1019" height="198" condition="String.IsEqual(Control.GetLabel(10102),banner)">
+					<control type="group">
+<!-- 						<left>25</left> -->
+						<control type="image">
+							<top>-10</top>
+							<left>-10</left>
+							<right>-10</right>
+							<bottom>-10</bottom>
+							<texture colordiffuse="FocusColor" border="5">listselect_fo.png</texture>
+						</control>
+						<control type="group">
+							<visible>!String.IsEmpty(ListItem.Art(banner)) | String.IsEmpty(ListItem.Art(fanart))</visible>
+							<control type="image">
+								<top>6</top>
+								<left>6</left>
+								<width>1007</width>
+								<height>186</height>
+								<aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+								<texture background="true" diffuse="diffuse/infowall-banner.png">$VAR[Art1Image]</texture>
+							</control>
+						</control>
+						<control type="group">
+							<visible>String.IsEmpty(ListItem.Art(banner)) + ListItem.IsParentFolder</visible>
+							<control type="image">
+								<top>6</top>
+								<left>6</left>
+								<width>1007</width>
+								<height>186</height>
+								<texture>background.png</texture>
+								<colordiffuse>ItemDiffuse</colordiffuse>
+							</control>
+							<control type="image">
+								<top>6</top>
+								<left>6</left>
+								<width>1007</width>
+								<height>186</height>
+								<aspectratio align="center" aligny="center">keep</aspectratio>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+						</control>
+						<control type="group">
+							<visible>String.IsEmpty(ListItem.Art(banner))</visible>
+							<control type="image">
+								<top>6</top>
+								<left>6</left>
+								<width>1007</width>
+								<height>186</height>
+								<aspectratio scalediffuse="false">scale</aspectratio>
+								<texture background="true" diffuse="diffuse/infowall-banner.png">$INFO[ListItem.Art(fanart)]</texture>
+							</control>
+							<control type="image">
+								<top>16</top>
+								<left>15</left>
+								<width>450</width>
+								<height>151</height>
+								<aspectratio>keep</aspectratio>
+								<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+							</control>
+						</control>
+					</control>
+						<include content="OverlayIcons">
+							<param name="OverlayLeft" value="975" />
+							<param name="OverlayTop" value="8" />
+						</include>
+				</focusedlayout>
+
+				<itemlayout height="264" width="357" condition="[String.IsEqual(Control.GetLabel(10102),fanart) | String.IsEqual(Control.GetLabel(10102),landscape)| String.IsEqual(Control.GetLabel(10102),logo)] + !Container.Content(seasons)">
+					<control type="image">
+						<top>6</top>
+						<left>16</left>
+						<width>325</width>
+						<height>252</height>
+						<aspectratio scalediffuse="false">keep</aspectratio>
+						<texture background="true">$VAR[Art1Image]</texture>
+					</control>
+					<control type="group">
+						<visible>[String.IsEmpty(ListItem.Art(clearlogo))+String.IsEmpty(ListItem(landscape))]</visible>
+						<control type="textbox">
+							<left>16</left>
+							<top>6</top>
+							<width>325</width>
+							<height>252</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<font>font16</font>
+							<label>$VAR[FloorLabelVar]</label>
+						</control>
+					</control>
+					<control type="image">
+						<top>6</top>
+						<left>6</left>
+						<width>345</width>
+						<height>252</height>
+						<texture border="5">overlays/diffuse-overlay.png</texture>
+ 						<visible>Skin.HasSetting(Enable.HighlightFocused)</visible>
+					</control>
+						<include content="OverlayIcons">
+							<param name="OverlayLeft" value="313" />
+							<param name="OverlayTop" value="8" />
+						</include>
+
+				</itemlayout>
+
+				<focusedlayout height="264" width="357" condition="[String.IsEqual(Control.GetLabel(10102),fanart) | String.IsEqual(Control.GetLabel(10102),landscape)| String.IsEqual(Control.GetLabel(10102),logo)] + !Container.Content(seasons)">
+					<control type="group">
+						<include>PanelFocusedItemZoom</include>
+						<control type="image">
+							<top>-10</top>
+							<left>-10</left>
+							<right>-10</right>
+							<bottom>-10</bottom>
+							<texture colordiffuse="FocusColor" border="5">listselect_fo.png</texture>
+						</control>
+						<control type="image">
+							<top>6</top>
+							<left>16</left>
+							<width>325</width>
+							<height>252</height>
+							<aspectratio scalediffuse="false">keep</aspectratio>
+							<texture background="true">$VAR[Art1Image]</texture>
+						</control>
+						<control type="group">
+							<visible>[String.IsEmpty(ListItem.Art(clearlogo))+String.IsEmpty(ListItem(landscape))]</visible>
+							<control type="textbox">
+								<left>16</left>
+								<top>6</top>
+								<width>325</width>
+								<height>252</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>font16</font>
+								<label>$VAR[FloorLabelVar]</label>
+							</control>
+						</control>
+					</control>
+						<include content="OverlayIcons">
+							<param name="OverlayLeft" value="313" />
+							<param name="OverlayTop" value="8" />
+						</include>
+				</focusedlayout>
+			</control>
+
+			<control type="group">
+				<top>196</top>
+				<left>1171</left>
+				<width>680</width>
+				<visible>Control.IsVisible(51)</visible>
+				<include content="VideoInfoSide" file="Includes_InfoSideView.xml"/>
+
+			</control>
+		</control>
+
+		<control type="group">
+			<visible>Control.IsVisible(51) + !$EXP[isInfoDialog]</visible>
+			<top>-15</top>
+			<include>Scrollbar_Vertical</include>
+		</control>
+	</include>
+
+
+	<!-- Music InfoWall -->
+	<include name="MusicInfoWall">
+		<control type="group">
+			<visible>Control.IsVisible(51) + !$EXP[isInfoDialog]</visible>
+			<top>0</top>
+			<control type="panel" id="51">
+				<left>45</left>
+				<top>165</top>
+				<width>1120</width>
+				<height>840</height>
+				<onleft>SetProperty(MediaMenu,True,home)</onleft>
+				<onleft>SetFocus(9050)</onleft>
+				<onright>60</onright>
+				<onup>51</onup>
+				<ondown>51</ondown>
+				<pagecontrol>60</pagecontrol>
+				<preloaditems>2</preloaditems>
+				<viewtype label="31021">icons</viewtype>
+				<visible>Container.Content(artists) | Container.Content(albums)</visible>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+
+				<itemlayout height="280" width="280">
+					<control type="image">
+						<top>6</top>
+						<left>6</left>
+						<width>268</width>
+						<height>268</height>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<texture background="true" fallback="DefaultFallback.png" diffuse="diffuse/wall-square.png">$VAR[Art1Image]</texture>
+					</control>
+					<control type="image">
+						<top>6</top>
+						<left>6</left>
+						<width>268</width>
+						<height>268</height>
+						<texture border="5">overlays/diffuse-overlay.png</texture>
+ 						<visible>Skin.HasSetting(Enable.HighlightFocused)</visible>
+					</control>
+
+					<control type="image">
+						<visible>Container.Content(albums)</visible>
+						<top>8</top>
+						<left>8</left>
+						<width>100</width>
+						<height>50</height>
+						<texture>$VAR[AudioSourceFlagVar,flags/audiosource/,.png]</texture>
+					</control>
+
+					<control type="group">
+						<visible>Container.Content(artists)</visible>
+						<control type="image">
+							<top>224</top>
+							<left>6</left>
+							<width>268</width>
+							<height>50</height>
+							<texture colordiffuse="BB000000" border="5">diffuse/actor-label.png</texture>
+						</control>
+						<control type="label">
+							<left>6</left>
+							<top>234</top>
+							<width>268</width>
+							<height>28</height>
+							<align>center</align>
+							<textoffsetx>4</textoffsetx>
+							<info>ListItem.Label</info>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout height="280" width="280">
+					<control type="group">
+						<include>PanelFocusedItemZoom</include>
+						<control type="image">
+							<top>-10</top>
+							<left>-10</left>
+							<right>-10</right>
+							<bottom>-10</bottom>
+							<texture colordiffuse="FocusColor" border="5">listselect_fo.png</texture>
+						</control>
+						<control type="image">
+							<top>6</top>
+							<left>6</left>
+							<width>268</width>
+							<height>268</height>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<texture fallback="DefaultFallback.png" background="true" diffuse="diffuse/wall-square.png">$VAR[Art1Image]</texture>
+						</control>
+						<control type="image">
+							<visible>Container.Content(albums)</visible>
+							<top>8</top>
+							<left>8</left>
+							<width>100</width>
+							<height>50</height>
+							<texture>$VAR[AudioSourceFlagVar,flags/audiosource/,.png]</texture>
+						</control>
+
+						<control type="group">
+							<control type="group">
+								<visible>Container.Content(artists)</visible>
+								<control type="image">
+									<top>224</top>
+									<left>6</left>
+									<width>268</width>
+									<height>50</height>
+									<texture colordiffuse="BB000000" border="5">diffuse/actor-label.png</texture>
+								</control>
+								<control type="label">
+									<left>6</left>
+									<top>234</top>
+									<width>268</width>
+									<height>28</height>
+									<align>center</align>
+									<textoffsetx>4</textoffsetx>
+									<info>ListItem.Label</info>
+								</control>
+							</control>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="group">
+				<top>171</top>
+				<left>1195</left>
+				<width>680</width>
+				<visible>Control.IsVisible(51)</visible>
+				<include content="MusicInfoSide" file="Includes_InfoSideView.xml"/>
+			</control>
+
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(51) + !$EXP[isInfoDialog]</visible>
+			<top>-15</top>
+			<include>Scrollbar_Vertical</include>
+		</control>
+	</include>
+</includes>

@@ -1,0 +1,35 @@
+[COLOR blue][B]Free Flow v1.0.4[/B][/COLOR]
+
+🚀 [B]Initial Release – Non-Debrid Focused Build[/B]
+
+Free Flow launches as a streamlined, no-nonsense addon built specifically for users who want a smooth experience without relying on premium services. This version focuses on speed, simplicity, and accessibility while laying the groundwork for future expansion.
+
+━━━━━━━━━━━━━━━━━━
+🧩 Added Free Flow Live Section.
+
+🔓 [B]Non-Debrid One Click System[/B]
+A fully integrated one-click setup designed for free sources only. No accounts, no authorisation steps—just select and play. Everything is tuned for quick access and minimal user input.
+
+🧹 [B]Scrapers Removed[/B]
+All traditional scraper modules have been stripped out. This reduces overhead, eliminates unnecessary delays, and avoids common scraping failures—resulting in a more stable and predictable experience.
+
+🚫 [B]Premium Services Removed[/B]
+Support for premium providers (Real-Debrid, Premiumize, AllDebrid, etc.) has been completely removed. Free Flow is intentionally built to operate independently of paid services.
+
+🎬 [B]Optimised Free Link Selection[/B]
+Sources are prioritised to deliver the best possible quality available without a premium account. The addon intelligently focuses on reliable, working links to reduce buffering and dead sources.
+
+⚡️ [B]Fast & Lightweight Performance[/B]
+With fewer dependencies and a trimmed-down backend, navigation is quicker, menus load faster, and playback starts with minimal delay.
+
+🧩 [B]Clean & Simplified Structure[/B]
+The addon has been organised for ease of use, making it ideal for both new users and streamlined builds. No clutter, no unnecessary configuration.
+
+
+🚧 [B]Ongoing Development[/B]
+New content sections, categories, and enhancements are already in development and will be rolled out in upcoming updates.
+
+━━━━━━━━━━━━━━━━━━
+
+💡 [B]Summary[/B]
+Free Flow v1.0.0 delivers a focused, plug-and-play experience—fast, stable, and built entirely around free streaming with zero setup required.

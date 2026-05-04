@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "content": "Create build_local_apk.py script for automated apktool extraction and injection",
+      "status": "completed"
+    },
+    {
+      "id": "2",
+      "content": "Clean up GitHub Actions workflow files",
+      "status": "completed"
+    },
+    {
+      "id": "3",
+      "content": "Provide instructions for the user to provide the base APK and run the script",
+      "status": "completed"
+    },
+    {
+      "id": "4",
+      "content": "Fix autoexec.py extraction by switching to a Kodi Service Addon approach",
+      "status": "completed"
+    }
+  ]
+}

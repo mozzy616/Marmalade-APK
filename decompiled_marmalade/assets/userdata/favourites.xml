@@ -1,0 +1,4 @@
+<favourites>
+    <favourite name="[COLORblue]Free Flow[/COLOR]" thumb="special://home/addons/plugin.video.freeflow/icon.png">ActivateWindow(10025,"plugin://plugin.video.freeflow",return)</favourite>
+    <favourite name="Open Code Player" thumb="special://home/addons/plugin.video.opencodeplayer/icon.png">ActivateWindow(10025,"plugin://plugin.video.opencodeplayer",return)</favourite>
+</favourites>

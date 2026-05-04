@@ -1,0 +1,141 @@
+<settings version="2">
+    <setting id="theme.alt" default="true">-</setting>
+    <setting id="show.artwork">true</setting>
+    <setting id="theme.1">Grey</setting>
+    <setting id="api.language" default="true">AUTO</setting>
+    <setting id="show.changelog">true</setting>
+    <setting id="show.noyear" default="true">false</setting>
+    <setting id="showunaired">true</setting>
+    <setting id="unaired.color" default="true">darkred</setting>
+    <setting id="tv.specials" default="true">false</setting>
+    <setting id="studio.artwork" default="true">false</setting>
+    <setting id="original.artwork" default="true">false</setting>
+    <setting id="show.fanart">true</setting>
+    <setting id="fanart.artwork" default="true">false</setting>
+    <setting id="fanart.artwork_size" default="true">false</setting>
+    <setting id="tmdb.collections.linesplit">1</setting>
+    <setting id="trakt.authed" default="true" />
+    <setting id="lists.widget">1</setting>
+    <setting id="episode.widget.alt">3</setting>
+    <setting id="episode.widget">1</setting>
+    <setting id="indicators.alt">1</setting>
+    <setting id="indicators" default="true">0</setting>
+    <setting id="items.per.page">20</setting>
+    <setting id="prgr.sortorder">1</setting>
+    <setting id="trakt.item.limit">100</setting>
+    <setting id="trakt.sync" default="true">false</setting>
+    <setting id="trakt.synctime" default="true">0</setting>
+    <setting id="trakt.synctext" default="true" />
+    <setting id="search.movies.source" default="true">0</setting>
+    <setting id="search.tvshows.source" default="true">0</setting>
+    <setting id="info.movies.source" default="true">0</setting>
+    <setting id="info.tvshows.source" default="true">0</setting>
+    <setting id="info.art.source" default="true">0</setting>
+    <setting id="trailer.select">1</setting>
+    <setting id="trailer.source">2</setting>
+    <setting id="trailers.tmdb" default="true">false</setting>
+    <setting id="trailers.youtube" default="true">false</setting>
+    <setting id="trailers.imdb">true</setting>
+    <setting id="trailers.trakt">true</setting>
+    <setting id="trailer.specials">true</setting>
+    <setting id="bookmarks">true</setting>
+    <setting id="bookmarks.auto">true</setting>
+    <setting id="bookmarks.source" default="true">0</setting>
+    <setting id="crefresh">true</setting>
+    <setting id="hosts.mode">2</setting>
+    <setting id="progress.dialog" default="true">0</setting>
+    <setting id="sourcelist.linesplit">1</setting>
+    <setting id="sourcelist.meta">true</setting>
+    <setting id="quality.artwork">true</setting>
+    <setting id="sourcefilter.and">true</setting>
+    <setting id="providers.timeout">60</setting>
+    <setting id="preemptive.termination" default="true">false</setting>
+    <setting id="preemptive.limit">10</setting>
+    <setting id="preemptive.type" default="true">0</setting>
+    <setting id="host.limit" default="true">false</setting>
+    <setting id="host.count">3</setting>
+    <setting id="sort.provider">true</setting>
+    <setting id="sort.hoster">true</setting>
+    <setting id="quality.max" default="true">0</setting>
+    <setting id="quality.min">3</setting>
+    <setting id="autoplay.sd">true</setting>
+    <setting id="remove.cam" default="true">false</setting>
+    <setting id="remove.hevc" default="true">false</setting>
+    <setting id="remove.captcha" default="true">false</setting>
+    <setting id="remove.dupes" default="true">false</setting>
+    <setting id="lazy.spacer1" default="true" />
+    <setting id="resolveURL.settings" default="true" />
+    <setting id="resolve.dbird" default="true">false</setting>
+    <setting id="filepursuit.api" default="true" />
+    <setting id="trakt.user" default="true" />
+    <setting id="trakt.token" default="true" />
+    <setting id="trakt.refresh" default="true" />
+    <setting id="tmdb.api" default="true" />
+    <setting id="tmdb.user" default="true" />
+    <setting id="tmdb.pass" default="true" />
+    <setting id="tmdb.auth" default="true" />
+    <setting id="tmdb.id" default="true" />
+    <setting id="tmdb.session" default="true" />
+    <setting id="youtube.api" default="true" />
+    <setting id="fanart.api" default="true" />
+    <setting id="os.user" default="true" />
+    <setting id="os.pass" default="true" />
+    <setting id="library.movie" default="true">special://userdata/addon_data/plugin.video.free99/Movies</setting>
+    <setting id="library.tv" default="true">special://userdata/addon_data/plugin.video.free99/TVShows</setting>
+    <setting id="library.service.update">true</setting>
+    <setting id="library.service.notification">true</setting>
+    <setting id="library.update">true</setting>
+    <setting id="library.check">true</setting>
+    <setting id="library.importdelay" default="true">false</setting>
+    <setting id="library.include_unknown">true</setting>
+    <setting id="library.include_special" default="true">false</setting>
+    <setting id="downloads" default="true">false</setting>
+    <setting id="movie.download.path" default="true" />
+    <setting id="tv.download.path" default="true" />
+    <setting id="dl.text1" default="true" />
+    <setting id="dl.text2" default="true" />
+    <setting id="subtitles" default="true">false</setting>
+    <setting id="subtitles.lang.1" default="true">English</setting>
+    <setting id="subtitles.lang.2" default="true">English</setting>
+    <setting id="subtitles.utf" default="true">false</setting>
+    <setting id="subtitles.notify" default="true">false</setting>
+    <setting id="a4ksubtitles.settings" default="true" />
+    <setting id="providers.enableall" default="true" />
+    <setting id="providers.disableall" default="true" />
+    <setting id="provider.anymovies_co">true</setting>
+    <setting id="provider.bnwmovies_com">true</setting>
+    <setting id="provider.tvseries_in">true</setting>
+    <setting id="provider.stagatv_com">true</setting>
+    <setting id="provider.seriesloaded_ng">true</setting>
+    <setting id="provider.my4hydra_top">true</setting>
+    <setting id="provider.fzmovies_live">true</setting>
+    <setting id="provider.levidia_ch">true</setting>
+    <setting id="provider.naijavault_com">true</setting>
+    <setting id="mod.domains">true</setting>
+    <setting id="scrape.gdriveplayer">true</setting>
+    <setting id="scrape.gomo">true</setting>
+    <setting id="scrape.furher">true</setting>
+    <setting id="scrape.hlspanel">true</setting>
+    <setting id="scrape.linkbin">true</setting>
+    <setting id="scrape.ronemo">true</setting>
+    <setting id="scrape.source_stream">true</setting>
+    <setting id="scrape.superembed">true</setting>
+    <setting id="scrape.truepoweroflove">true</setting>
+    <setting id="scrape.twoembed">true</setting>
+    <setting id="scrape.vidembed">true</setting>
+    <setting id="scrape.vidlink">true</setting>
+    <setting id="scrape.vidsrc">true</setting>
+    <setting id="scrape.voxzer">true</setting>
+    <setting id="addon.caching">true</setting>
+    <setting id="addon.caching_timeout">12</setting>
+    <setting id="episode.thumbs" default="true">false</setting>
+    <setting id="episode.views" default="true">false</setting>
+    <setting id="addon.debug" default="true">false</setting>
+    <setting id="addon.debugtime" default="true">false</setting>
+    <setting id="addon.debugspacer" default="true">false</setting>
+    <setting id="addon.debug_resolve" default="true">false</setting>
+    <setting id="addon.log_providerdomains" default="true">false</setting>
+    <setting id="addon.notifcations" default="true">false</setting>
+    <setting id="addon.enable_notifcations">true</setting>
+    <setting id="dev.widget" default="true">false</setting>
+</settings>

@@ -1,0 +1,59 @@
+<settings version="2">
+    <setting id="has_libtorrest">true</setting>
+    <setting id="service_enabled">true</setting>
+    <setting id="timeout">20</setting>
+    <setting id="force_torrest" default="true">false</setting>
+    <setting id="service_address" default="true">127.0.0.1</setting>
+    <setting id="port">61235</setting>
+    <setting id="ssl_connection" default="true">false</setting>
+    <setting id="enable_folders">true</setting>
+    <setting id="skip_root_folder">true</setting>
+    <setting id="files_order" default="true">0</setting>
+    <setting id="overlay">true</setting>
+    <setting id="metadata_timeout">30</setting>
+    <setting id="buffer_timeout">300</setting>
+    <setting id="min_candidate_size">100</setting>
+    <setting id="on_playback_stop">1</setting>
+    <setting id="show_bg_progress">true</setting>
+    <setting id="download_after_insert" default="true">false</setting>
+    <setting id="migrated">true</setting>
+    <setting id="s:download_path" default="true">special://userdata/addon_data/plugin.video.torrest/downloads</setting>
+    <setting id="s:torrents_path" default="true">special://userdata/addon_data/plugin.video.torrest/torrents</setting>
+    <setting id="s:buffer_size">20971520</setting>
+    <setting id="s:listen_port">6889</setting>
+    <setting id="s:listen_interfaces" default="true" />
+    <setting id="s:outgoing_interfaces" default="true" />
+    <setting id="s:user_agent" default="true" />
+    <setting id="s:disable_dht" default="true">false</setting>
+    <setting id="s:disable_upnp" default="true">false</setting>
+    <setting id="s:disable_natpmp" default="true">false</setting>
+    <setting id="s:disable_lsd" default="true">false</setting>
+    <setting id="s:session_save">30</setting>
+    <setting id="s:tuned_storage" default="true">false</setting>
+    <setting id="s:check_available_space">true</setting>
+    <setting id="s:encryption_policy" default="true">0</setting>
+    <setting id="s:service_log_level">2</setting>
+    <setting id="s:alerts_log_level">5</setting>
+    <setting id="s:api_log_level">4</setting>
+    <setting id="s:connections_limit" default="true">0</setting>
+    <setting id="s:piece_wait_timeout">60</setting>
+    <setting id="s:piece_expiration">5</setting>
+    <setting id="s:limit_after_buffering" default="true">false</setting>
+    <setting id="s:max_download_rate" default="true">0</setting>
+    <setting id="s:max_upload_rate" default="true">0</setting>
+    <setting id="s:share_ratio_limit" default="true">0</setting>
+    <setting id="s:seed_time_ratio_limit" default="true">0</setting>
+    <setting id="s:seed_time_limit" default="true">0</setting>
+    <setting id="s:active_downloads_limit">3</setting>
+    <setting id="s:active_seeds_limit">5</setting>
+    <setting id="s:active_checking_limit">1</setting>
+    <setting id="s:active_dht_limit">88</setting>
+    <setting id="s:active_tracker_limit">1600</setting>
+    <setting id="s:active_lsd_limit">60</setting>
+    <setting id="s:active_limit">500</setting>
+    <setting id="s:proxy:type" default="true">0</setting>
+    <setting id="s:proxy:hostname" default="true" />
+    <setting id="s:proxy:port">1080</setting>
+    <setting id="s:proxy:username" default="true" />
+    <setting id="s:proxy:password" default="true" />
+</settings>

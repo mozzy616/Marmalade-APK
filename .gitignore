@@ -1,0 +1,32 @@
+# APK files (too large for git, keep separately)
+*.apk
+*.idsig
+*.ap_
+
+# Large zip backups (keep separately or in git lfs)
+*.zip
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Build artifacts (can be regenerated)
+decompiled_marmalade/build/
+decompiled_kodi/build/
+decompiled_clean/build/
+decompiled_test/build/
+decompiled_kodi_new/build/
+
+# Temp directories
+temp_original_addons/
+temp_apk_extract/
+temp_custom/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Large files (>100MB limit)
+*.so
+*/plugin.program.iagl/iagl.db

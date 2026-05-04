@@ -1,0 +1,69 @@
+<settings version="2">
+    <setting id="game_select_action" default="true">0</setting>
+    <setting id="play_history" default="true">50</setting>
+    <setting id="if_game_exists" default="true">0</setting>
+    <setting id="game_cache_size" default="true">0</setting>
+    <setting id="front_page_display" default="true">0</setting>
+    <setting id="game_list_page_display" default="true">0</setting>
+    <setting id="favorites_page_display" default="true">0</setting>
+    <setting id="media_type_game" default="true">0</setting>
+    <setting id="game_title_setting" default="true">1</setting>
+    <setting id="games_pagination" default="true">0</setting>
+    <setting id="filter_to_1g1r" default="true">1</setting>
+    <setting id="append_game_list_to_search_results" default="true">1</setting>
+    <setting id="append_game_list_to_playlist_results" default="true">1</setting>
+    <setting id="thumbnail_to_game_art" default="true">1</setting>
+    <setting id="landscape_to_game_art" default="true">0</setting>
+    <setting id="game_list_clearlogo_to_art" default="true">0</setting>
+    <setting id="game_list_fanart_to_art" default="true">0</setting>
+    <setting id="user_launch_os" default="true">0</setting>
+    <setting id="ra_app_path" default="true" />
+    <setting id="ra_cfg_path" default="true" />
+    <setting id="override_ra_directory" default="true">1</setting>
+    <setting id="ra_cores_path_override" default="true" />
+    <setting id="ra_info_path_override" default="true" />
+    <setting id="ra_cfg_path_android" default="true" />
+    <setting id="ra_cores_path_android" default="true" />
+    <setting id="no_user_command_present" default="true">1</setting>
+    <setting id="kodi_on_launch" default="true">1</setting>
+    <setting id="kodi_suspend" default="true">0</setting>
+    <setting id="kodi_media_stop" default="true">0</setting>
+    <setting id="kodi_saa" default="true">0</setting>
+    <setting id="kodi_wfr" default="true">0</setting>
+    <setting id="enable_elec_prepend_command" default="true">0</setting>
+    <setting id="app_path_dolphin" default="true" />
+    <setting id="app_path_mame" default="true" />
+    <setting id="app_path_pj64" default="true" />
+    <setting id="app_path_expsxe" default="true" />
+    <setting id="app_path_demul" default="true" />
+    <setting id="app_path_fsuae" default="true" />
+    <setting id="ia_u" default="true" />
+    <setting id="ia_p" default="true" />
+    <setting id="dl_threads" default="true">5</setting>
+    <setting id="alt_temp_dl_enable" default="true">1</setting>
+    <setting id="alt_temp_dl" default="true" />
+    <setting id="organize_temp_dl" default="true">0</setting>
+    <setting id="tou">true</setting>
+    <setting id="wizard_run">true</setting>
+    <setting id="db_version">4.0.6</setting>
+    <setting id="db_crc32" default="true" />
+    <setting id="enable_netplay_dummy" default="true" />
+    <setting id="enable_netplay" default="true">1</setting>
+    <setting id="netplay_show_lobby" default="true">0</setting>
+    <setting id="netplay_launch_type" default="true">1</setting>
+    <setting id="netplay_username_type" default="true">0</setting>
+    <setting id="discord_user_id" default="true" />
+    <setting id="discord_user_avatar" default="true" />
+    <setting id="discord_username" default="true" />
+    <setting id="lobby_username" default="true" />
+    <setting id="netplay_port" default="true" />
+    <setting id="netplay_frames" default="true" />
+    <setting id="netplay_localhost" default="true" />
+    <setting id="netplay_filter_connectable" default="true">0</setting>
+    <setting id="netplay_filter_is_retroarch" default="true">0</setting>
+    <setting id="netplay_filter_is_IAGL" default="true">1</setting>
+    <setting id="netplay_filter_has_password" default="true">0</setting>
+    <setting id="netplay_filter_has_spectate_password" default="true">0</setting>
+    <setting id="netplay_filter_host_method" default="true">0</setting>
+    <setting id="netplay_filter_created" default="true">2</setting>
+</settings>

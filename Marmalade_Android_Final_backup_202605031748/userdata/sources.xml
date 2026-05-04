@@ -1,0 +1,60 @@
+<sources>
+    <programs>
+        <default pathversion="1"></default>
+    </programs>
+    <video>
+        <default pathversion="1"></default>
+        <source>
+            <name>Playlists</name>
+            <path pathversion="1">special://videoplaylists/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+        <source>
+            <name>Downloads</name>
+            <path pathversion="1">D:\Downloads\</path>
+            <allowsharing>true</allowsharing>
+        </source>
+    </video>
+    <music>
+        <default pathversion="1"></default>
+    </music>
+    <pictures>
+        <default pathversion="1"></default>
+        <source>
+            <name>Pictures</name>
+            <path pathversion="1">C:\Users\Admin\Pictures\</path>
+            <allowsharing>true</allowsharing>
+        </source>
+    </pictures>
+    <files>
+        <default pathversion="1"></default>
+        <source>
+            <name>Kodi</name>
+            <path pathversion="1">C:\Users\Admin\AppData\Roaming\Kodi\</path>
+            <allowsharing>true</allowsharing>
+        </source>
+        <source>
+            <name>repository Twilight</name>
+            <path pathversion="1">https://kodi7rd.github.io/repository/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+        <source>
+            <name>crepo</name>
+            <path pathversion="1">https://team-crew.github.io/</path>
+            <allowsharing>true</allowsharing>
+        </source>
+        <source>
+            <name>E:</name>
+            <path pathversion="1">E:\</path>
+            <allowsharing>true</allowsharing>
+        </source>
+        <source>
+            <name>diggz123</name>
+            <path pathversion="1">https://tinyurl.com/diggz123</path>
+            <allowsharing>true</allowsharing>
+        </source>
+    </files>
+    <games>
+        <default pathversion="1"></default>
+    </games>
+</sources>

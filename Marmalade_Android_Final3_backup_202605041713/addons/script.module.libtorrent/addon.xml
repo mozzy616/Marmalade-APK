@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<addon id='script.module.libtorrent' version='1.1.7' name='python-libtorrent' provider-name='DiMartino, srg70, RussakHH, aisman, inpos'>
+  <requires>
+    <import addon='xbmc.python' version='3.0.0'/>
+  </requires>
+  <extension point="xbmc.python.module" library="python_libtorrent"/>
+  <extension point='xbmc.addon.metadata'>
+    <platform>all</platform>
+    <summary lang='en'>python-libtorrent for Kodi (Android ARM)</summary>
+    <license>MIT License</license>
+  </extension>
+</addon>
