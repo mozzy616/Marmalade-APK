@@ -29,4 +29,9 @@ desktop.ini
 
 # Large files (>100MB limit)
 *.so
-*/plugin.program.iagl/iagl.db
+*.db
+*.xbt
+*.mp3
+*.mp4
+*.zip
+*.rar
