@@ -179,3 +179,20 @@ li.setProperty('IsPlayable', 'true')    # enables play in UI
 li.setProperty('game.controller', controller_id)  # optional controller binding
 xbmc.Player().play(actual_path, li)
 ```
+
+## Auto-play Fix: Android Playback
+- **Root cause**: `_autoplay_monitor` used `xbmc.Player().play(plugin_url, li)` with a `plugin://` URL, which doesn't properly route to LordPlayer on Android (Kodi Playlist Player reports "skipping unplayable item")
+- **Fix v1**: `play_via_LordPlayer()` via `xbmcplugin.setResolvedUrl(HANDLE, True, li)` — worked on Windows but `setResolvedUrl` on the same HANDLE a second time is silently ignored on Android
+- **Fix v2 (final)**: Auto-play uses `play_http_url()` which calls `xbmc.Player().play(serve_url, li)` with the Torrest HTTP serve URL directly. This bypasses both the plugin redirect and the `setResolvedUrl` second-call issue. The serve URL is a plain HTTP URL (`http://127.0.0.1:61235/...`) that `Player().play()` handles correctly on all platforms.
+- **Functions added**: `play_http_url(url, title)` — uses `xbmc.Player().play(url, li)`. Auto-play pre-buffers via `_prebuffer_torrest` then calls `play_http_url(serve, title)`.
+- **Side benefit**: `play_via_LordPlayer` still used for initial (non-auto) play and ensures trackers are appended via `if TRACKERS not in magnet: magnet += TRACKERS`
+
+## LordPlayer Android ABI Detection
+- **Root cause**: `constants.py` used `platform.machine()` which on MEmu (x86_64 with Houdini ARM translation) incorrectly returns `armv7l` instead of `x86_64`
+- **Fix**: Added `_get_android_abi()` helper that reads `ro.product.cpu.abi` via `getprop` (e.g., returns `x86_64` on MEmu). Falls back to `platform.machine()` if `getprop` fails.
+- **File**: `plugin.video.lordplayer/lib/constants.py`
+
+## LordPlayer x86 Library Mode Fix
+- **Root cause**: `libtorrest.so` for Android x86_64 has broken ELF program headers (dlopen fails with "ELF program header is invalid" on MEmu). ARM builds work fine in library mode.
+- **Fix**: `constants.py` returns empty `LIB_NAME` for x86/x86_64 Android, forcing executable mode. `service.py` checks `if LIB_NAME and os.path.exists(LIB_PATH)` before trying library mode.
+- **Test**: After restart, LordPlayer uses executable mode (`torrest` binary via subprocess) on x86 Android, Torrest starts on port 61235.
