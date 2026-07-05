@@ -234,6 +234,7 @@ def show_all_games():
 
         context_items = [
             ('Game Info', f'RunPlugin({get_url(action="game_info", game=title)})'),
+            ('Rename Game', f'RunPlugin({get_url(action="rename_game", game=title)})'),
             ('Delete from List', f'RunPlugin({get_url(action="delete_game", game=title)})'),
             ('Rescan Directories', f'RunPlugin({get_url(action="scan")})'),
         ]
@@ -338,6 +339,49 @@ def delete_game_action(game_title):
     end_directory()
 
 
+def rename_game_action(game_title):
+    games = cache.load_game_list()
+    game = None
+    for g in games:
+        if g.get('title') == game_title:
+            game = g
+            break
+    if not game:
+        end_directory()
+        return
+
+    new_name = xbmcgui.Dialog().input('Rename Game', game_title, type=xbmcgui.INPUT_ALPHANUM)
+    if not new_name or new_name == game_title:
+        end_directory()
+        return
+
+    game['title'] = new_name
+    game['orig_title'] = new_name
+    cache.save_game_list(games)
+    cache.clear_meta(game_title)
+    cache.clear_meta(new_name)
+
+    fetch_single_metadata(new_name)
+    progress = xbmcgui.DialogProgress()
+    progress.create(ADDON_NAME, f'Downloading artwork for: {new_name}')
+    cache.download_all_art([game], progress)
+    progress.close()
+
+    xbmcgui.Dialog().notification(ADDON_NAME, f'Renamed: {game_title} → {new_name}', ICON, 3000)
+    end_directory()
+
+
+def fetch_single_metadata(game_name):
+    from metadata import MetadataFetcher
+    mf = MetadataFetcher(ADDON, cache)
+    rawg_key = ADDON.getSetting('rawg_key')
+    if not rawg_key:
+        return
+    game = {'title': game_name}
+    mf.fetch_all([game])
+
+
+
 def rescan_action():
     do_scan()
 
@@ -399,6 +443,8 @@ def router(paramstring):
         delete_game_action(params.get('game', ''))
     elif action == 'game_info':
         show_game_info(params.get('game', ''))
+    elif action == 'rename_game':
+        rename_game_action(params.get('game', ''))
     else:
         show_main_menu()
 
