@@ -1,0 +1,4 @@
+# Kodi Game Launcher strings
+msg00001=""
+msg00002="Game Launcher"
+msg00003="Launch PC games directly from Kodi"
